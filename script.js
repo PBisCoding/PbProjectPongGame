@@ -1,4 +1,4 @@
-//Create JS representation from DOM
+//Create JS representation with id and documents
 const startText = document.getElementById('startText');
 const paddle1 = document.getElementById('paddle1');
 const paddle2 = document.getElementById('paddle2');
@@ -17,9 +17,9 @@ let paddle1Y = 150;
 let paddle2Speed = 0;
 let paddle2Y = 150;
 let ballX = 290;
-let ballSpeedX = 2;
+let ballSpeedX = 4;
 let ballY = 190;
-let ballSpeedY = 2;
+let ballSpeedY = 4;
 let player2Score = 0;
 let player1Score = 0;
 
@@ -169,8 +169,8 @@ function updateScoreboard() {
 function resetBall() {
     ballX = gameWidth / 2 - ball.clientWidth / 2; 
     ballY = gameHeight / 2 - ball.clientHeight / 2;
-    ballSpeedX = Math.random() > 0.5 ? 2 : -2; 
-    ballSpeedY = Math.random() > 0.5 ? 2 : -2; 
+    ballSpeedX = Math.random() > 0.5 ? 4 : -4;
+    ballSpeedY = Math.random() > 0.5 ? 4 : -4;
 }
 
 function pauseGame() {
